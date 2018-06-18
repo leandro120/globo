@@ -8,4 +8,8 @@ public interface MoviesListView {
     void showToast(String message);
 
     void showMovies(List<Movie> movies);
+
+    void openDialog();
+
+    void closeDialog();
 }

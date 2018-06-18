@@ -27,6 +27,10 @@ android {
             buildConfigField "String", "API", '"https://private-c19f3-globo.apiary-mock.com/"'
         }
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
