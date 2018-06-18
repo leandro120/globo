@@ -4,6 +4,7 @@ import android.view.MenuItem;
 
 import br.com.globo.movies.R;
 import br.com.globo.movies.movies.activity.MoviesView;
+import br.com.globo.movies.movies.fragment.MoviesListFragment_;
 
 public class MoviesPresenterImpl implements MoviesPresenter {
     private MoviesView mView;

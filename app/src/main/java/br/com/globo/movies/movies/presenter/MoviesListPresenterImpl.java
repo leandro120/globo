@@ -1,4 +1,4 @@
 package br.com.globo.movies.movies.presenter;
 
-class MoviesListPresenterImpl {
+public class MoviesListPresenterImpl implements MoviesListPresenter {
 }
