@@ -4,4 +4,10 @@
     <string name="menu_movies">Filmes</string>
     <string name="menu_favorites">Favoritos</string>
     <string name="menu_profile">Perfil</string>
+    <string name="add_favorite">Adicionar aos favoritos</string>
+    <string name="remove_favorite">Remover dos favoritos</string>
+    <string name="add_favorite_msg">Deseja adicionar esse filme aos seus favoritos?</string>
+    <string name="remove_favorite_msg">Deseja remover esse filme dos seus favoritos?</string>
+    <string name="yes">sim</string>
+    <string name="no">não</string>
 </resources>

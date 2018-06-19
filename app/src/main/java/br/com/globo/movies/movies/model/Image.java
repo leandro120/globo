@@ -1,6 +1,8 @@
 package br.com.globo.movies.movies.model;
 
-public class Image {
+import io.realm.RealmObject;
+
+public class Image extends RealmObject {
     private String small;
     private String medium;
     private String big;

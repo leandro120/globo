@@ -1,6 +1,7 @@
 package br.com.globo.movies.movies.fragment;
 
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout;
@@ -43,9 +44,9 @@ public class MoviesListFragment extends BaseFragment implements MoviesListView, 
 
     private void initAdapter() {
         swipeRefresh.setOnRefreshListener( this );
-        moviesAdapter = new MoviesAdapter(getActivity(), movies);
+        moviesAdapter = new MoviesAdapter(getActivity(), movies, mPresenter);
         moviesView.setAdapter( moviesAdapter );
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         moviesView.setLayoutManager( layoutManager );
     }
 

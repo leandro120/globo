@@ -2,13 +2,16 @@ package br.com.globo.movies.movies.model;
 
 import java.util.List;
 
-public class Movie {
+import io.realm.RealmList;
+import io.realm.RealmObject;
+
+public class Movie extends RealmObject {
     private int id;
     private String title;
     private String subtitle;
     private String synopsis;
     private String time;
-    private List<Image> images;
+    private RealmList<Image> images;
 
     public int getId() {
         return id;
@@ -50,11 +53,11 @@ public class Movie {
         this.time = time;
     }
 
-    public List<Image> getImages() {
+    public RealmList<Image> getImages() {
         return images;
     }
 
-    public void setImages(List<Image> images) {
+    public void setImages(RealmList<Image> images) {
         this.images = images;
     }
 }
