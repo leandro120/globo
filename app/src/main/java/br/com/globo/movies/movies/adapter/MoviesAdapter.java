@@ -73,7 +73,10 @@ public class MoviesAdapter extends RecyclerView.Adapter{
             builder.setTitle(context.getString(R.string.add_favorite));
             builder.setMessage(context.getString(R.string.add_favorite_msg));
         }
-        builder.setPositiveButton(context.getString(R.string.yes), (arg0, arg1) -> mPresenter.movieFavorite(movies.get((int)(v.getTag()))));
+        builder.setPositiveButton(context.getString(R.string.yes), (arg0, arg1) -> {
+            mPresenter.movieFavorite(movies.get((int)(v.getTag())));
+            this.notifyDataSetChanged();
+        });
         builder.setNegativeButton(context.getString(R.string.no), (arg0, arg1) -> {});
         builder.create().show();
     }
