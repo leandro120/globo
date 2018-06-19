@@ -48,14 +48,16 @@ public class MoviesListPresenterImpl implements MoviesListPresenter {
 
     @Override
     public void movieFavorite(Movie movie) {
-        realm.beginTransaction();
         if(checkIfFavorite(movie)){
-            Movie movieResult = realm.where(Movie.class).equalTo("id", movie.getId()).findFirst();
-            movieResult.deleteFromRealm();
+            realm.executeTransaction(realm -> {
+                Movie movieResult = realm.where(Movie.class).equalTo("id", movie.getId()).findFirst();
+                movieResult.deleteFromRealm();
+            });
         }else{
-            realm.copyToRealm(movie);
+            realm.executeTransaction(realm -> {
+                realm.copyToRealm(movie);
+            });
         }
-        realm.commitTransaction();
     }
 
     @Override

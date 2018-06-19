@@ -28,19 +28,18 @@ public class MoviesFavoritesPresenterImpl implements MoviesFavoritesPresenter {
         if(movies.size() == 0){
             mView.showToast(R.string.no_favorite);
         }
-
         mView.closeDialog();
         mView.showMoviesFavorites(movies);
     }
 
     @Override
     public void removeFavorite(Movie movie) {
-        realm.beginTransaction();
         if(checkIfFavorite(movie)){
-            Movie movieResult = realm.where(Movie.class).equalTo("id", movie.getId()).findFirst();
-            movieResult.deleteFromRealm();
+            realm.executeTransaction(realm -> {
+                Movie movieResult = realm.where(Movie.class).equalTo("id", movie.getId()).findFirst();
+                movieResult.deleteFromRealm();
+            });
         }
-        realm.commitTransaction();
     }
 
     private Boolean checkIfFavorite(Movie movie){

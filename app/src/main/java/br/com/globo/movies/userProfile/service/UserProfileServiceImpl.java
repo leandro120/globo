@@ -5,10 +5,10 @@ import br.com.globo.movies.service.ServiceFactory;
 import br.com.globo.movies.userProfile.model.User;
 import rx.Observable;
 
-public class UserServiceImpl implements UserService {
+public class UserProfileServiceImpl implements UserProfileService {
     @Override
     public Observable<User> login(String email, String password) {
-        IUserService service = ServiceFactory.createRetrofitService( IUserService.class );
+        IUserProfileService service = ServiceFactory.createRetrofitService( IUserProfileService.class );
 
         return service.login(email, password)
                 .lift(new CheckResponseStatus())

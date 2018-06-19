@@ -7,6 +7,8 @@ import br.com.globo.movies.movies.activity.MoviesView;
 import br.com.globo.movies.movies.fragment.MoviesFavoritesFragment;
 import br.com.globo.movies.movies.fragment.MoviesFavoritesFragment_;
 import br.com.globo.movies.movies.fragment.MoviesListFragment_;
+import br.com.globo.movies.userProfile.fragment.UserProfileFragment;
+import br.com.globo.movies.userProfile.fragment.UserProfileFragment_;
 
 public class MoviesPresenterImpl implements MoviesPresenter {
     private MoviesView mView;
@@ -26,6 +28,7 @@ public class MoviesPresenterImpl implements MoviesPresenter {
                 mView.showFragment(MoviesFavoritesFragment_.builder().build());
                 return true;
             case R.id.action_profile:
+                mView.showFragment(UserProfileFragment_.builder().build());
                 return true;
         }
         return false;

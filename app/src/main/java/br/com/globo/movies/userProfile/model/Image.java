@@ -1,7 +1,9 @@
 package br.com.globo.movies.userProfile.model;
 
 import io.realm.RealmObject;
+import io.realm.annotations.RealmClass;
 
+@RealmClass(name = "userImage")
 public class Image extends RealmObject {
     private String small;
     private String medium;

@@ -1,6 +1,5 @@
 package br.com.globo.movies.userProfile.model;
 
-import br.com.globo.movies.movies.model.Image;
 import io.realm.RealmList;
 import io.realm.RealmObject;
 
@@ -8,6 +7,24 @@ public class User extends RealmObject {
     private int id;
     private String name;
     private RealmList<Image> images;
+    private String age;
+    private String bio;
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
 
     public RealmList<Image> getImages() {
         return images;

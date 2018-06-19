@@ -11,4 +11,8 @@
     <string name="yes">sim</string>
     <string name="no">não</string>
     <string name="no_favorite">Nenhum favorito encontrado.</string>
+    <string name="email">E-mail</string>
+    <string name="password">Senha</string>
+    <string name="login">Login</string>
+    <string name="logout">Desconectar</string>
 </resources>

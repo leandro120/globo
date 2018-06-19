@@ -1,7 +1,9 @@
 package br.com.globo.movies.movies.model;
 
 import io.realm.RealmObject;
+import io.realm.annotations.RealmClass;
 
+@RealmClass(name = "movieImage")
 public class Image extends RealmObject {
     private String small;
     private String medium;
