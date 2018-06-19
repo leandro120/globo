@@ -60,8 +60,8 @@
 
         <ImageView
             android:id="@+id/image"
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
 
         <TextView
             android:id="@+id/name"
@@ -69,13 +69,16 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/image"
             android:layout_toRightOf="@id/image"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp" />
 
         <TextView
             android:id="@+id/age"
             android:layout_toEndOf="@id/image"
             android:layout_toRightOf="@id/image"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -84,8 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/image"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginTop="10dp"/>
 
         <Button
             android:id="@+id/logout"
