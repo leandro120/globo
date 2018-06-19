@@ -4,6 +4,8 @@ import android.view.MenuItem;
 
 import br.com.globo.movies.R;
 import br.com.globo.movies.movies.activity.MoviesView;
+import br.com.globo.movies.movies.fragment.MoviesFavoritesFragment;
+import br.com.globo.movies.movies.fragment.MoviesFavoritesFragment_;
 import br.com.globo.movies.movies.fragment.MoviesListFragment_;
 
 public class MoviesPresenterImpl implements MoviesPresenter {
@@ -21,6 +23,7 @@ public class MoviesPresenterImpl implements MoviesPresenter {
                 mView.showFragment(MoviesListFragment_.builder().build());
                 return true;
             case R.id.action_favorites:
+                mView.showFragment(MoviesFavoritesFragment_.builder().build());
                 return true;
             case R.id.action_profile:
                 return true;

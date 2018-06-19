@@ -34,7 +34,6 @@ public class MoviesActivity extends BaseActivity implements MoviesView, BottomNa
         navigation.setSelectedItemId(R.id.action_movies);
     }
 
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         return mPresenter.onNavigationItemSelected(item);

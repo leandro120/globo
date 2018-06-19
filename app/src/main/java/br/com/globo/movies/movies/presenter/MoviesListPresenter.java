@@ -14,4 +14,6 @@ public interface MoviesListPresenter {
     void movieFavorite(Movie movie);
 
     Boolean checkIfFavorite(Movie movie);
+
+    void loadMovies(int limit);
 }

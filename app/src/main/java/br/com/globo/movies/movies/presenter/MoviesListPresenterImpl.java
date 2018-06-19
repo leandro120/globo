@@ -26,6 +26,11 @@ public class MoviesListPresenterImpl implements MoviesListPresenter {
     }
 
     @Override
+    public void loadMovies(int limit) {
+        loadMovies(limit, 0);
+    }
+
+    @Override
     public void loadMovies(int limit, int offset) {
         mView.openDialog();
 

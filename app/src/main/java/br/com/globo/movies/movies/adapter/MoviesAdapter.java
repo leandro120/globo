@@ -37,14 +37,14 @@ public class MoviesAdapter extends RecyclerView.Adapter{
         View view = LayoutInflater.from(context)
                 .inflate( R.layout.movies, parent, false);
 
-        ProductsViewHolder holder = new ProductsViewHolder(view);
+        MoviesViewHolder holder = new MoviesViewHolder(view);
 
         return holder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
-        ProductsViewHolder holder = (ProductsViewHolder) viewHolder;
+        MoviesViewHolder holder = (MoviesViewHolder) viewHolder;
         Movie movie = movies.get(position);
 
         Picasso.get().load(movie.getImages().get(0).getLarge())
@@ -86,7 +86,7 @@ public class MoviesAdapter extends RecyclerView.Adapter{
         return movies.size();
     }
 
-    private class ProductsViewHolder extends  RecyclerView.ViewHolder{
+    private class MoviesViewHolder extends  RecyclerView.ViewHolder{
         private final ImageView image;
         private final TextView title;
         private final TextView subtitle;
@@ -94,7 +94,7 @@ public class MoviesAdapter extends RecyclerView.Adapter{
         private final TextView synopsis;
         private final Button favoriteBtn;
 
-        public ProductsViewHolder(View view) {
+        public MoviesViewHolder(View view) {
             super( view );
             image = view.findViewById(R.id.image);
             title = view.findViewById(R.id.title);

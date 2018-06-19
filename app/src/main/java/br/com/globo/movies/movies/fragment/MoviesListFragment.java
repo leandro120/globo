@@ -39,7 +39,7 @@ public class MoviesListFragment extends BaseFragment implements MoviesListView, 
         mPresenter = new MoviesListPresenterImpl();
         mPresenter.init(this);
         initAdapter();
-        mPresenter.loadMovies(20, 0);
+        mPresenter.loadMovies(20);
     }
 
     private void initAdapter() {
